@@ -1,0 +1,328 @@
+<html>
+<head>
+<title>SVG</title>
+<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+html, body {
+  height: 100%;
+}
+.wrapper {
+  display: table;
+  height: 800px;
+  margin: 0 auto;
+}
+.content {
+	display: table-row;
+	height: 100%;
+}
+.tree {
+	position: relative;
+}
+</style>
+</head>
+<body>
+<!--<div style="background-color: blue; height: 100%;">-->
+
+<!--<embed type="image/svg+xml" src="drawing.svg" />-->
+<!--<img src="drawing.svg">-->
+
+<!--</div>-->
+	<div class="wrapper">
+	<div class="content">
+	<!--<button onclick="up(10);">Up</button>-->
+	</div>
+	<div class="tree">
+	<!--<object id="svg" data="drawing.svg" type="image/svg+xml" height="300" style="position: absolute; bottom: 120px; z-index: 3;">
+	Your browser does not support SVG
+	</object>
+	<object id="svg" data="drawing.svg" type="image/svg+xml" height="300" style="position: absolute; bottom: 80px; z-index: 2;">
+	Your browser does not support SVG
+	</object>
+	<object id="svg" data="drawing.svg" type="image/svg+xml" height="300" style="position: absolute; bottom: 40px; z-index: 1;">
+	Your browser does not support SVG
+	</object>
+	<object id="svg" data="drawing.svg" type="image/svg+xml" height="300" style="position: relative;">
+	Your browser does not support SVG
+	</object>-->
+	<!--<object id="svg" data="abc.svg" type="image/svg+xml" height="200" style="position: absolute;  z-index: 2; bottom: 160px;">
+	Your browser does not support SVG
+	</object>-->
+
+	<object id="firstBlock" data="base.svg" type="image/svg+xml" width="200" style="position: absolute; bottom: 0px; left: 50%; margin-left: -100px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block1" data="abc.svg" type="image/svg+xml" width="180" style="opacity: 0; position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 100px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block2" data="abc3.svg" type="image/svg+xml" width="180" style="opacity: 0; position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 100px;">
+	Your browser does not support SVG
+	</object>
+
+
+	
+
+
+<!--
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 140px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 180px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 220px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 260px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 300px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 340px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 380px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 420px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 460px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 500px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 540px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 580px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 620px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 660px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 700px;">
+	Your browser does not support SVG
+	</object>
+	<object id="block" data="abc.svg" type="image/svg+xml" width="180" style="position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 740px;">
+	Your browser does not support SVG
+	</object>
+-->
+
+
+	<!--
+сумма высот всех блоков = tree.height
+	<object id="block" data="abc.svg" type="image/svg+xml" width="160" style="position: absolute; bottom: 160px; left: 50%; margin-left: -80px;">
+	Your browser does not support SVG
+	</object>-->
+
+	<!--
+	<object id="svg1" data="abc.svg" type="image/svg+xml" width="260" style="position: absolute; bottom: 180px; left: 50%; margin-left: -130px;">
+	Your browser does not support SVG
+	</object>
+	-->
+
+
+
+	<!--<object id="svg1" data="abc.svg" type="image/svg+xml" height="200" style="position: absolute; bottom: 50px;">
+	Your browser does not support SVG
+	</object>-->
+	<!--<object id="svg1" data="abc.svg" type="image/svg+xml" height="200" style="position: relative; bottom: 50px;">
+	Your browser does not support SVG
+	</object>-->
+	<!--<object id="svg2" data="abc.svg" type="image/svg+xml" height="200" style="position: absolute; bottom: 50px;">
+	Your browser does not support SVG
+	</object>-->
+	
+	</div>
+	</div>
+
+<script>
+//function color() {
+
+
+
+/*
+window.onload=function() {
+var SVG = document.getElementById("svg").getSVGDocument();
+var STYLE = SVG.getElementById('r1');
+STYLE.setAttribute("fill", "black");
+};*/
+
+
+window.onload=function() {
+	tree = document.getElementsByClassName('tree');
+//var SVG = document.getElementById("svg").getSVGDocument();
+//var STYLE = SVG.getElementById('rect5721');
+	render(5);
+	tree.scrollTop = tree.scrollHeight;
+//STYLE.style.fill = #ff00ff';
+//STYLE.style.width = '20px';
+//alert(SVG.InnerHTML);
+};
+const up = (n) => {
+	var svg_dom = document.getElementById("svg");
+	var height = svg_dom.getAttribute("height");
+	//var width = svg_dom.getAttribute("width");
+	//alert(height);
+	height = parseInt(height, 10) + n;
+	//alert(height);
+	svg_dom.setAttribute("height", height);
+	//svg_dom.setAttribute("width", width + n);
+};
+var tree;
+const render = (height) => {
+	newBlock = document.getElementById('firstBlock');
+
+	//svg = newBlock.getSVGDocument();
+	//alert(svg);
+	blockWidth = parseInt(newBlock.getAttribute("width")) + height * 20;
+	newBlock.setAttribute('width', blockWidth);
+	newBlock.style.marginLeft = -(blockWidth / 2) + "px";
+	bottom = (blockWidth + (blockWidth / 100) * 5.3224) / 2;
+	lastBottom = (blockWidth + (blockWidth / 100) * 5.3224) / 2;
+	//alert(bottom);
+	//h = parseInt(newBlock.getAttribute("width")) - 30;
+	h = blockWidth + (blockWidth / 100) * 5.3224;
+	//alert(h);
+	tree[0].style.height = h +'px';
+	count = 1;
+	colorFlag = 1;
+	while(height > 1) {
+		//hiddenBlock =  document.getElementById('block')
+		if (colorFlag == 1) {
+			block = document.getElementById('block2');
+			colorFlag = 2;
+		} else {
+			block = document.getElementById('block1');
+			colorFlag = 1;
+		}
+
+		//svg = newBlock.getSVGDocument();
+		//item = svg.getElementById('svg3507');
+		//alert(item);
+		
+		//!!!
+		//item.setAttribute('fill', '#888888');
+		//block.setAttribute('id', 'ex');
+		//tree[0].appendChild(block);
+		
+
+
+
+		//svg = document.getElementById('block').firstElementChild;
+		//alert(svg.getElementById('svg3507'));
+		//svg = block.contentDocument;
+		//alert(block.getSVGDocument());
+		
+		/*block.addEventListener('load',function() {
+    	svgDoc = this.contentDocument;
+    	alert(svgDoc);
+		}, false);*/
+
+		//svg.setAttribute('fill', '#888888');
+		
+
+		//!!!
+		//block = document.getElementById('ex');
+		newBlock = block.cloneNode();
+
+		/*tree[0].appendChild(newBlock);
+		svg = block.getSVGDocument();
+		item = svg.getElementById('svg3507');
+		alert(item.getAttribute('height'));*/
+
+		//svg = newBlock.contentDocument;
+		//item = svg.documentElement;
+		//item = svg.getElementById('svg3507');
+		//elem = item.getAttribute('height');
+		//alert(item);
+		blockWidth = blockWidth - 20;
+		/*block.setAttribute('width', blockWidth);
+		svg = block.getSVGDocument();
+		item = svg.getElementById('svg3507');
+		alert(item.getAttribute('height'));*/
+		//alert(blockWidth);
+		if (blockWidth <= 20) {
+			return 0;
+		} 
+		newBlock.hidden = false;
+		newBlock.setAttribute('width', blockWidth);
+		newBlock.style.position = "absolute";
+		//alert(bottom);
+		newBlock.style.marginBottom = bottom + "px";
+		newBlock.style.left = "50%";
+		newBlock.style.marginLeft = -(blockWidth / 2) + "px";
+		newBlock.style.opacity = 1;
+		newBlock.setAttribute('id', 'block' + count);
+		//bottom = bottom + (blockWidth / 2 - 50);
+		height = height - 1;
+		tree[0].appendChild(newBlock);
+		
+		//alert(newBlock.getAttribute("width"));
+		//h = h + newBlock.clientHeight / 2;
+		//alert(blockWidth + (blockWidth / 100) * 14.9838);
+		h = h + (blockWidth - (blockWidth / 100) * 14.9838) - lastBottom;
+		//alert(newBlock.clientHeight);
+		
+		//alert(svg.getAttribute('height'));
+		//item = svg.getElementById('svg3507');
+		//item = svg2.getElementById('svg3507');
+
+		//alert(item.getAttribute('height'));
+		//bottom = bottom + (parseInt(newBlock.getAttribute('width') / 3.5));
+		//bottom = bottom + 0.3 * (blockWidth - (blockWidth / 100) * 14.9838) / 2;
+		//lastBottom = (blockWidth - (blockWidth / 100) * 14.9838) / 2;
+		bottom = bottom + 0.37 * (blockWidth - (blockWidth / 100) * 14.9838);
+		lastBottom = (blockWidth - (blockWidth / 100) * 14.9838) - (0.37 * (blockWidth - (blockWidth / 100) * 14.9838));
+		//h = h + (parseInt(newBlock.getAttribute("width")) / 3.5);
+		tree[0].style.height = h + "px";
+		count++;
+		//svg = newBlock.getSVGDocument();
+		//alert(svg);
+	}
+};
+
+
+
+
+
+
+//SVG.getElementsByClassName('abc');
+//	STYLE.remove();
+//STYLE.setAttribute("fill", "black");
+//};
+//$(STYLE).css('fill', 'slategrey');
+//}
+//window.onload=function() {
+//var object = document.getElementById("svg");
+//var svgDocument = object.contentDocument;
+//var svgb1 = svgDocument.getElementsById("rect5721");
+//svgb1.setAttribute("fill", "yellow");
+//};
+/*function color(new_color, rect){
+    // Получаем объект SVG
+    var SVG = document.getElementById("svg").getSVGDocument();
+    // Получаем эелемент (тег) в SVG файле
+    var STYLE = SVG.getElementById(rect);
+    // Меняем стили с помощью jQ
+    $(STYLE).css('fill', '#'+new_color);
+}*/
+/*function color(new_color, rect){
+    // Получаем объект SVG
+    var SVG = document.getElementById("svg").getSVGDocument();
+    // Получаем эелемент (тег) в SVG файле
+    var STYLE = SVG.getElementById(rect);
+    // Меняем стили с помощью jQ
+    $(STYLE).css('fill', '#'+new_color);
+}*/
+</script>
+
+</body>
+</html>
+
+
