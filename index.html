@@ -48,15 +48,25 @@ html, body {
 	Your browser does not support SVG
 	</object>-->
 
-	<object id="firstBlock" data="base.svg" type="image/svg+xml" width="200" style="position: absolute; bottom: 0px; left: 50%; margin-left: -100px;">
+	
+	<object id="trunk" data="trunk.svg" type="image/svg+xml" width="30" style="position: absolute; bottom: 0px; left: 50%; margin-left: -15px;">
 	Your browser does not support SVG
 	</object>
-	<object id="block1" data="abc.svg" type="image/svg+xml" width="180" style="opacity: 0; position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 100px;">
+	<object id="firstLevel" data="small2.svg" type="image/svg+xml" width="200" style="position: absolute; bottom: 0px; left: 50%; margin-left: -100px; margin-bottom: 25px; z-index: 1;">
+	Your browser does not support SVG
+	</object>
+	<object id="newLevel1" data="big.svg" type="image/svg+xml" width="208" style="opacity: 0; position: absolute; bottom: 0px; left: 50%; margin-left: -104px; margin-bottom: 25px; ">
+	Your browser does not support SVG
+	</object>
+	<object id="newLevel2" data="big2.svg" type="image/svg+xml" width="208" style="opacity: 0; position: absolute; bottom: 0px; left: 50%; margin-left: -104px; margin-bottom: 25px; ">
+	Your browser does not support SVG
+	</object>
+	<!--<object id="block1" data="abc.svg" type="image/svg+xml" width="180" style="opacity: 0; position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 100px;">
 	Your browser does not support SVG
 	</object>
 	<object id="block2" data="abc3.svg" type="image/svg+xml" width="180" style="opacity: 0; position: absolute; bottom: 0px; left: 50%; margin-left: -90px; margin-bottom: 100px;">
 	Your browser does not support SVG
-	</object>
+	</object>-->
 
 
 	
@@ -143,65 +153,51 @@ html, body {
 
 <script>
 //function color() {
-
-
-
 /*
 window.onload=function() {
 var SVG = document.getElementById("svg").getSVGDocument();
 var STYLE = SVG.getElementById('r1');
 STYLE.setAttribute("fill", "black");
 };*/
-
-
 window.onload=function() {
 	tree = document.getElementsByClassName('tree');
 //var SVG = document.getElementById("svg").getSVGDocument();
 //var STYLE = SVG.getElementById('rect5721');
-	render(5);
-	tree.scrollTop = tree.scrollHeight;
+	render(300);
+	//tree.scrollTop = tree.scrollHeight;
 //STYLE.style.fill = #ff00ff';
 //STYLE.style.width = '20px';
 //alert(SVG.InnerHTML);
 };
-const up = (n) => {
-	var svg_dom = document.getElementById("svg");
-	var height = svg_dom.getAttribute("height");
-	//var width = svg_dom.getAttribute("width");
-	//alert(height);
-	height = parseInt(height, 10) + n;
-	//alert(height);
-	svg_dom.setAttribute("height", height);
-	//svg_dom.setAttribute("width", width + n);
-};
-var tree;
+//var tree;
 const render = (height) => {
-	newBlock = document.getElementById('firstBlock');
-
+	firstLevel = document.getElementById('firstLevel');
+	//blockTop.setAttribute('width', '600');
+	//alert(top);
+	//blockTop.style.marginBottom = 500 + "px";
 	//svg = newBlock.getSVGDocument();
 	//alert(svg);
-	blockWidth = parseInt(newBlock.getAttribute("width")) + height * 20;
-	newBlock.setAttribute('width', blockWidth);
-	newBlock.style.marginLeft = -(blockWidth / 2) + "px";
-	bottom = (blockWidth + (blockWidth / 100) * 5.3224) / 2;
-	lastBottom = (blockWidth + (blockWidth / 100) * 5.3224) / 2;
+	//blockWidth = parseInt(newBlock.getAttribute("width"));
+	//newBlock.setAttribute('width', blockWidth);
+	//newBlock.style.marginLeft = -(blockWidth / 2) + "px";
+	BOTTOM = 25;
+	OFFSET = 46;
+	FIRST_LEVEL_HEIGHT = 242.710;
 	//alert(bottom);
 	//h = parseInt(newBlock.getAttribute("width")) - 30;
-	h = blockWidth + (blockWidth / 100) * 5.3224;
+	WINDOW_HEIGHT = BOTTOM + FIRST_LEVEL_HEIGHT;
 	//alert(h);
-	tree[0].style.height = h +'px';
+	tree[0].style.height = WINDOW_HEIGHT +'px';
 	count = 1;
-	colorFlag = 1;
 	while(height > 1) {
 		//hiddenBlock =  document.getElementById('block')
-		if (colorFlag == 1) {
-			block = document.getElementById('block2');
-			colorFlag = 2;
+		if ((height - 1) % 2 === 0) {
+			newLevel = document.getElementById('newLevel1').cloneNode();
+			//colorFlag = 2;
 		} else {
-			block = document.getElementById('block1');
-			colorFlag = 1;
+			newLevel = document.getElementById('newLevel2').cloneNode();
+			//colorFlag = 1;
 		}
-
 		//svg = newBlock.getSVGDocument();
 		//item = svg.getElementById('svg3507');
 		//alert(item);
@@ -211,9 +207,6 @@ const render = (height) => {
 		//block.setAttribute('id', 'ex');
 		//tree[0].appendChild(block);
 		
-
-
-
 		//svg = document.getElementById('block').firstElementChild;
 		//alert(svg.getElementById('svg3507'));
 		//svg = block.contentDocument;
@@ -223,75 +216,60 @@ const render = (height) => {
     	svgDoc = this.contentDocument;
     	alert(svgDoc);
 		}, false);*/
-
 		//svg.setAttribute('fill', '#888888');
 		
-
 		//!!!
-		//block = document.getElementById('ex');
-		newBlock = block.cloneNode();
-
+		//block = document.getElementById('block');
+		//newBlock = newLevel.cloneNode();
 		/*tree[0].appendChild(newBlock);
 		svg = block.getSVGDocument();
 		item = svg.getElementById('svg3507');
 		alert(item.getAttribute('height'));*/
-
 		//svg = newBlock.contentDocument;
 		//item = svg.documentElement;
 		//item = svg.getElementById('svg3507');
 		//elem = item.getAttribute('height');
 		//alert(item);
-		blockWidth = blockWidth - 20;
+		//alert(blockWidth);
+		//blockWidth = blockWidth - blockWidth / 100 * (1.66 * (count / 4));
+		//alert(blockWidth);
+		//blockWidth = blockWidth - 20;
 		/*block.setAttribute('width', blockWidth);
 		svg = block.getSVGDocument();
 		item = svg.getElementById('svg3507');
 		alert(item.getAttribute('height'));*/
 		//alert(blockWidth);
-		if (blockWidth <= 20) {
-			return 0;
-		} 
-		newBlock.hidden = false;
-		newBlock.setAttribute('width', blockWidth);
-		newBlock.style.position = "absolute";
 		//alert(bottom);
-		newBlock.style.marginBottom = bottom + "px";
-		newBlock.style.left = "50%";
-		newBlock.style.marginLeft = -(blockWidth / 2) + "px";
-		newBlock.style.opacity = 1;
-		newBlock.setAttribute('id', 'block' + count);
+		newLevel.style.marginBottom = BOTTOM + "px";
+		newLevel.style.opacity = 1;
+		newLevel.setAttribute('id', 'block' + count);
 		//bottom = bottom + (blockWidth / 2 - 50);
 		height = height - 1;
-		tree[0].appendChild(newBlock);
-		
+		tree[0].appendChild(newLevel);
+		firstLevel.style.marginBottom = BOTTOM + OFFSET;
+
 		//alert(newBlock.getAttribute("width"));
 		//h = h + newBlock.clientHeight / 2;
 		//alert(blockWidth + (blockWidth / 100) * 14.9838);
-		h = h + (blockWidth - (blockWidth / 100) * 14.9838) - lastBottom;
+		WINDOW_HEIGHT = WINDOW_HEIGHT + OFFSET;
 		//alert(newBlock.clientHeight);
 		
 		//alert(svg.getAttribute('height'));
 		//item = svg.getElementById('svg3507');
 		//item = svg2.getElementById('svg3507');
-
 		//alert(item.getAttribute('height'));
 		//bottom = bottom + (parseInt(newBlock.getAttribute('width') / 3.5));
 		//bottom = bottom + 0.3 * (blockWidth - (blockWidth / 100) * 14.9838) / 2;
 		//lastBottom = (blockWidth - (blockWidth / 100) * 14.9838) / 2;
-		bottom = bottom + 0.37 * (blockWidth - (blockWidth / 100) * 14.9838);
-		lastBottom = (blockWidth - (blockWidth / 100) * 14.9838) - (0.37 * (blockWidth - (blockWidth / 100) * 14.9838));
+		BOTTOM = BOTTOM + OFFSET;
+		
 		//h = h + (parseInt(newBlock.getAttribute("width")) / 3.5);
-		tree[0].style.height = h + "px";
+		tree[0].style.height = WINDOW_HEIGHT + "px";
 		count++;
 		//svg = newBlock.getSVGDocument();
 		//alert(svg);
 	}
 };
-
-
-
-
-
-
 //SVG.getElementsByClassName('abc');
 //	STYLE.remove();
 //STYLE.setAttribute("fill", "black");
@@ -324,5 +302,3 @@ const render = (height) => {
 
 </body>
 </html>
-
-
